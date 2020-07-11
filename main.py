@@ -1,8 +1,8 @@
-import time
 import asyncio
 from pyppeteer.launcher import launch
 
 URL = "https://www.gideonsgallery.com/shop-all"
+
 async def main():
     browser = await launch()
     page = await browser.newPage()
@@ -12,14 +12,10 @@ async def main():
     while True:
         loadbtn = await page.querySelector("[data-hook='load-more-button']")
 
-        try:
-            loadbtntext = await loadbtn.getProperty('textContent')
-        except AttributeError:
+        if loadbtn == None:
             break
-        
-        
+
         await loadbtn.click()
-        loadbtn = None
         await asyncio.sleep(1)
 
 
