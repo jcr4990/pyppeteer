@@ -29,7 +29,7 @@ async def main():
     await page.screenshot({'path': 'test.png'})
     
 
-
+    #
 
     # elements = await page.querySelectorAll("[data-hook='product-item-name']")
 
