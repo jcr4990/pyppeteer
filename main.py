@@ -30,7 +30,7 @@ async def main():
     
 
     
-
+    # PRINT TITLES
     # elements = await page.querySelectorAll("[data-hook='product-item-name']")
 
     # for element in elements:
